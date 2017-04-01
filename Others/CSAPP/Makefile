@@ -13,7 +13,10 @@ SPECIAL_FLAGS = -std=c++0x -D_GNU_SOURCE
 # the build target executable:
 TARGET =shellex \
 		waitpid1\
-		waitpid2
+		waitpid2\
+		signal1\
+		signal2\
+		signal3
 
 all: $(TARGET)
 
@@ -31,6 +34,15 @@ waitpid1: waitpid1.o csapp.o
 
 waitpid2: waitpid2.o csapp.o
 	$(CC) $(CFLAGS) -o $@ waitpid2.o csapp.o -pthread
+
+signal1: signal1.o csapp.o
+	$(CC) $(CFLAGS) -o $@ signal1.o csapp.o -pthread
+
+signal2: signal2.o csapp.o
+	$(CC) $(CFLAGS) -o $@ signal2.o csapp.o -pthread
+
+signal3: signal3.o csapp.o
+	$(CC) $(CFLAGS) -o $@ signal3.o csapp.o -pthread
 
 clean:
 	$(RM) $(TARGET) *.o
