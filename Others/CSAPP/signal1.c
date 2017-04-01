@@ -1,4 +1,6 @@
 /* $begin signal1 */
+/* This program is flawed because it fails to deal with the facts that
+signals can block, signals are not queued, and system calls can be interrupted. */
 #include "csapp.h"
 
 void handler1(int sig) 
