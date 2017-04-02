@@ -16,7 +16,8 @@ TARGET =shellex \
 		waitpid2\
 		signal1\
 		signal2\
-		signal3
+		signal3\
+		signal4
 
 all: $(TARGET)
 
@@ -43,6 +44,9 @@ signal2: signal2.o csapp.o
 
 signal3: signal3.o csapp.o
 	$(CC) $(CFLAGS) -o $@ signal3.o csapp.o -pthread
+
+signal4: signal4.o csapp.o
+	$(CC) $(CFLAGS) -o $@ signal4.o csapp.o -pthread
 
 clean:
 	$(RM) $(TARGET) *.o
