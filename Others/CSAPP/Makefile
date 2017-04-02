@@ -17,7 +17,9 @@ TARGET =shellex \
 		signal1\
 		signal2\
 		signal3\
-		signal4
+		signal4\
+		procmask1\
+		procmask2
 
 all: $(TARGET)
 
@@ -47,6 +49,12 @@ signal3: signal3.o csapp.o
 
 signal4: signal4.o csapp.o
 	$(CC) $(CFLAGS) -o $@ signal4.o csapp.o -pthread
+
+procmask1: procmask1.o csapp.o
+	$(CC) $(CFLAGS) -o $@ procmask1.o csapp.o -pthread
+
+procmask2: procmask2.o csapp.o
+	$(CC) $(CFLAGS) -o $@ procmask2.o csapp.o -pthread
 
 clean:
 	$(RM) $(TARGET) *.o
