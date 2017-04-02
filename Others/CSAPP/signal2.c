@@ -1,7 +1,7 @@
 /* $begin signal2 */
 /* An improved version of signal1 that correctly accounts for
-the facts that signals can block and are not queued. However, it does not allow for the
-possibility that system calls can be interrupted. */
+   the facts that signals can block and are not queued. However, it does not allow for the
+   possibility that system calls can be interrupted. */
 #include "csapp.h"
 
 void handler2(int sig) 

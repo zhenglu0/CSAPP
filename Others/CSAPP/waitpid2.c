@@ -1,9 +1,9 @@
 /* $begin waitpid2 */
 /* shows a simple change that eliminates this nondeterminism in the
-output order by reaping the children in the same order that they were created by
-the parent. In line 11, the parent stores the PIDs of its children in order, and then
-waits for each child in this same order by calling waitpid with the appropriate
-PID in the first argument.*/
+   output order by reaping the children in the same order that they were created by
+   the parent. In line 11, the parent stores the PIDs of its children in order, and then
+   waits for each child in this same order by calling waitpid with the appropriate
+   PID in the first argument.*/
 #include "csapp.h"
 #define N 2
 
