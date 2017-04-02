@@ -22,6 +22,8 @@ TARGET =shellex \
 		procmask2\
 		procmask3\
 		procmask4\
+		setjmp\
+		restart\
 
 all: $(TARGET)
 
@@ -63,6 +65,12 @@ procmask3: procmask3.o csapp.o rfork.o
 
 procmask4: procmask4.o csapp.o rfork.o
 	$(CC) $(CFLAGS) -o $@ procmask4.o csapp.o rfork.o -pthread
+
+setjmp: setjmp.o csapp.o
+	$(CC) $(CFLAGS) -o $@ setjmp.o csapp.o -pthread
+
+restart: restart.o csapp.o
+	$(CC) $(CFLAGS) -o $@ restart.o csapp.o -pthread
 
 clean:
 	$(RM) $(TARGET) *.o
