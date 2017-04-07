@@ -1,4 +1,5 @@
 /* $begin shellmain */
+/* we can test it with /bin/ls */
 #include "csapp.h"
 #define MAXARGS   128
 
@@ -14,7 +15,8 @@ int main()
     while (1) {
 	/* Read */
 	printf("> ");                   
-	Fgets(cmdline, MAXLINE, stdin); 
+	Fgets(cmdline, MAXLINE, stdin);
+	printf("cmdline = %s", cmdline);
 	if (feof(stdin))
 	    exit(0);
 

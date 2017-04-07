@@ -6,7 +6,7 @@ CFLAGS = $(CXXFLAGS)
 # compiler flags:
 #  -g    adds debugging information to the executable file
 #  -Wall turns on most, but not all, compiler warnings
-CXXFLAGS  = -Wall -Werror
+CXXFLAGS  = -g -Wall -Werror
 #LDFLAGS = -lm
 SPECIAL_FLAGS = -std=c++0x -D_GNU_SOURCE
 
